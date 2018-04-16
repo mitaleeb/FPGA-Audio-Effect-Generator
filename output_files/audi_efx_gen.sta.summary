@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -2.930
+TNS   : -82.375
+
+Type  : Slow 1200mV 85C Model Setup 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
+Slack : -2.485
+TNS   : -106.369
+
+Type  : Slow 1200mV 85C Model Setup 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 51.947
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
+Slack : 0.388
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -2.421
+TNS   : -33.894
+
+Type  : Slow 1200mV 85C Model Removal 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 1.332
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -51.830
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
+Slack : -1.285
+TNS   : -74.530
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK2_50'
+Slack : 9.894
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 27.484
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -2.625
+TNS   : -71.482
+
+Type  : Slow 1200mV 0C Model Setup 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
+Slack : -2.190
+TNS   : -92.144
+
+Type  : Slow 1200mV 0C Model Setup 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 52.236
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.366
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -2.147
+TNS   : -30.058
+
+Type  : Slow 1200mV 0C Model Removal 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 1.175
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -51.830
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
+Slack : -1.285
+TNS   : -74.530
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK2_50'
+Slack : 9.915
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 27.468
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -0.893
+TNS   : -20.714
+
+Type  : Fast 1200mV 0C Model Setup 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
+Slack : -0.690
+TNS   : -22.297
+
+Type  : Fast 1200mV 0C Model Setup 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 53.830
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.173
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.189
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -1.359
+TNS   : -19.026
+
+Type  : Fast 1200mV 0C Model Removal 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.682
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -43.369
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
+Slack : -1.000
+TNS   : -58.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK2_50'
+Slack : 9.604
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 27.573
+TNS   : 0.000
+
+------------------------------------------------------------
