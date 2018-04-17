@@ -1,5 +1,5 @@
 Fitter report for audi_efx_gen
-Sun Apr 15 19:05:38 2018
+Tue Apr 17 18:05:26 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -72,17 +72,17 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Sun Apr 15 19:05:38 2018      ;
+; Fitter Status                      ; Successful - Tue Apr 17 18:05:26 2018      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; audi_efx_gen                               ;
 ; Top-level Entity Name              ; audi_efx_gen                               ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 197 / 114,480 ( < 1 % )                    ;
-;     Total combinational functions  ; 178 / 114,480 ( < 1 % )                    ;
-;     Dedicated logic registers      ; 110 / 114,480 ( < 1 % )                    ;
-; Total registers                    ; 110                                        ;
+; Total logic elements               ; 463 / 114,480 ( < 1 % )                    ;
+;     Total combinational functions  ; 364 / 114,480 ( < 1 % )                    ;
+;     Dedicated logic registers      ; 242 / 114,480 ( < 1 % )                    ;
+; Total registers                    ; 242                                        ;
 ; Total pins                         ; 115 / 529 ( 22 % )                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                      ;
@@ -678,8 +678,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 537 ) ; 0.00 % ( 0 / 537 )         ; 0.00 % ( 0 / 537 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 537 ) ; 0.00 % ( 0 / 537 )         ; 0.00 % ( 0 / 537 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 857 ) ; 0.00 % ( 0 / 857 )         ; 0.00 % ( 0 / 857 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 857 ) ; 0.00 % ( 0 / 857 )         ; 0.00 % ( 0 / 857 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -702,7 +702,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 525 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 845 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 12 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -718,49 +718,49 @@ The pin-out file can be found in D:/Users/Dean/Documents/ECE385/audi_efx_gen/out
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 197 / 114,480 ( < 1 % ) ;
-;     -- Combinational with no register       ; 87                      ;
-;     -- Register only                        ; 19                      ;
-;     -- Combinational with a register        ; 91                      ;
+; Total logic elements                        ; 463 / 114,480 ( < 1 % ) ;
+;     -- Combinational with no register       ; 221                     ;
+;     -- Register only                        ; 99                      ;
+;     -- Combinational with a register        ; 143                     ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 94                      ;
-;     -- 3 input functions                    ; 23                      ;
-;     -- <=2 input functions                  ; 61                      ;
-;     -- Register only                        ; 19                      ;
+;     -- 4 input functions                    ; 230                     ;
+;     -- 3 input functions                    ; 27                      ;
+;     -- <=2 input functions                  ; 107                     ;
+;     -- Register only                        ; 99                      ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 128                     ;
-;     -- arithmetic mode                      ; 50                      ;
+;     -- normal mode                          ; 283                     ;
+;     -- arithmetic mode                      ; 81                      ;
 ;                                             ;                         ;
-; Total registers*                            ; 110 / 117,053 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 110 / 114,480 ( < 1 % ) ;
+; Total registers*                            ; 242 / 117,053 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 242 / 114,480 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 14 / 7,155 ( < 1 % )    ;
+; Total LABs:  partially or completely used   ; 34 / 7,155 ( < 1 % )    ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 115 / 529 ( 22 % )      ;
 ;     -- Clock pins                           ; 2 / 7 ( 29 % )          ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )           ;
 ;                                             ;                         ;
-; Global signals                              ; 3                       ;
+; Global signals                              ; 5                       ;
 ; M9Ks                                        ; 0 / 432 ( 0 % )         ;
 ; Total block memory bits                     ; 0 / 3,981,312 ( 0 % )   ;
 ; Total block memory implementation bits      ; 0 / 3,981,312 ( 0 % )   ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 532 ( 0 % )         ;
 ; PLLs                                        ; 1 / 4 ( 25 % )          ;
-; Global clocks                               ; 3 / 20 ( 15 % )         ;
+; Global clocks                               ; 5 / 20 ( 25 % )         ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )           ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )           ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
-; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%      ;
-; Peak interconnect usage (total/H/V)         ; 0.9% / 1.1% / 0.6%      ;
-; Maximum fan-out                             ; 58                      ;
+; Average interconnect usage (total/H/V)      ; 0.2% / 0.2% / 0.2%      ;
+; Peak interconnect usage (total/H/V)         ; 3.4% / 3.6% / 3.0%      ;
+; Maximum fan-out                             ; 102                     ;
 ; Highest non-global fan-out                  ; 41                      ;
-; Total fan-out                               ; 1110                    ;
-; Average fan-out                             ; 2.03                    ;
+; Total fan-out                               ; 2186                    ;
+; Average fan-out                             ; 2.29                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -773,26 +773,26 @@ The pin-out file can be found in D:/Users/Dean/Documents/ECE385/audi_efx_gen/out
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 197 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 87                     ; 0                              ;
-;     -- Register only                        ; 19                     ; 0                              ;
-;     -- Combinational with a register        ; 91                     ; 0                              ;
+; Total logic elements                        ; 463 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 221                    ; 0                              ;
+;     -- Register only                        ; 99                     ; 0                              ;
+;     -- Combinational with a register        ; 143                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 94                     ; 0                              ;
-;     -- 3 input functions                    ; 23                     ; 0                              ;
-;     -- <=2 input functions                  ; 61                     ; 0                              ;
-;     -- Register only                        ; 19                     ; 0                              ;
+;     -- 4 input functions                    ; 230                    ; 0                              ;
+;     -- 3 input functions                    ; 27                     ; 0                              ;
+;     -- <=2 input functions                  ; 107                    ; 0                              ;
+;     -- Register only                        ; 99                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 128                    ; 0                              ;
-;     -- arithmetic mode                      ; 50                     ; 0                              ;
+;     -- normal mode                          ; 283                    ; 0                              ;
+;     -- arithmetic mode                      ; 81                     ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total registers                             ; 110                    ; 0                              ;
-;     -- Dedicated logic registers            ; 110 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+; Total registers                             ; 242                    ; 0                              ;
+;     -- Dedicated logic registers            ; 242 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 14 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 34 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
 ; I/O pins                                    ; 115                    ; 0                              ;
@@ -800,7 +800,7 @@ The pin-out file can be found in D:/Users/Dean/Documents/ECE385/audi_efx_gen/out
 ; Total memory bits                           ; 0                      ; 0                              ;
 ; Total RAM block bits                        ; 0                      ; 0                              ;
 ; PLL                                         ; 0 / 4 ( 0 % )          ; 1 / 4 ( 25 % )                 ;
-; Clock control block                         ; 2 / 24 ( 8 % )         ; 1 / 24 ( 4 % )                 ;
+; Clock control block                         ; 4 / 24 ( 16 % )        ; 1 / 24 ( 4 % )                 ;
 ;                                             ;                        ;                                ;
 ; Connections                                 ;                        ;                                ;
 ;     -- Input Connections                    ; 19                     ; 2                              ;
@@ -809,8 +809,8 @@ The pin-out file can be found in D:/Users/Dean/Documents/ECE385/audi_efx_gen/out
 ;     -- Registered Output Connections        ; 1                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 1103                   ; 24                             ;
-;     -- Registered Connections               ; 482                    ; 0                              ;
+;     -- Total Connections                    ; 2179                   ; 24                             ;
+;     -- Registered Connections               ; 1023                   ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 8                      ; 17                             ;
@@ -842,31 +842,31 @@ The pin-out file can be found in D:/Users/Dean/Documents/ECE385/audi_efx_gen/out
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; AUD_ADCDAT ; D2    ; 1        ; 0            ; 68           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; AUD_ADCDAT ; D2    ; 1        ; 0            ; 68           ; 0            ; 32                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; CLOCK2_50  ; AG14  ; 3        ; 58           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; CLOCK_50   ; Y2    ; 2        ; 0            ; 36           ; 14           ; 38                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; CLOCK_50   ; Y2    ; 2        ; 0            ; 36           ; 14           ; 102                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; KEY[0]     ; M23   ; 6        ; 115          ; 40           ; 7            ; 41                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; KEY[1]     ; M21   ; 6        ; 115          ; 53           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; KEY[2]     ; N21   ; 6        ; 115          ; 42           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; KEY[3]     ; R24   ; 5        ; 115          ; 35           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[0]      ; AB28  ; 5        ; 115          ; 17           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[10]     ; AC24  ; 5        ; 115          ; 4            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[11]     ; AB24  ; 5        ; 115          ; 5            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[12]     ; AB23  ; 5        ; 115          ; 7            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[13]     ; AA24  ; 5        ; 115          ; 9            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[14]     ; AA23  ; 5        ; 115          ; 10           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[15]     ; AA22  ; 5        ; 115          ; 6            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[16]     ; Y24   ; 5        ; 115          ; 13           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[17]     ; Y23   ; 5        ; 115          ; 14           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[1]      ; AC28  ; 5        ; 115          ; 14           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[2]      ; AC27  ; 5        ; 115          ; 15           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[3]      ; AD27  ; 5        ; 115          ; 13           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[4]      ; AB27  ; 5        ; 115          ; 18           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[5]      ; AC26  ; 5        ; 115          ; 11           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[6]      ; AD26  ; 5        ; 115          ; 10           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[7]      ; AB26  ; 5        ; 115          ; 15           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[8]      ; AC25  ; 5        ; 115          ; 4            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[9]      ; AB25  ; 5        ; 115          ; 16           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[0]      ; AB28  ; 5        ; 115          ; 17           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[10]     ; AC24  ; 5        ; 115          ; 4            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[11]     ; AB24  ; 5        ; 115          ; 5            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[12]     ; AB23  ; 5        ; 115          ; 7            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[13]     ; AA24  ; 5        ; 115          ; 9            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[14]     ; AA23  ; 5        ; 115          ; 10           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[15]     ; AA22  ; 5        ; 115          ; 6            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[16]     ; Y24   ; 5        ; 115          ; 13           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[17]     ; Y23   ; 5        ; 115          ; 14           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[1]      ; AC28  ; 5        ; 115          ; 14           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[2]      ; AC27  ; 5        ; 115          ; 15           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[3]      ; AD27  ; 5        ; 115          ; 13           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[4]      ; AB27  ; 5        ; 115          ; 18           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[5]      ; AC26  ; 5        ; 115          ; 11           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[6]      ; AD26  ; 5        ; 115          ; 10           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[7]      ; AB26  ; 5        ; 115          ; 15           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[8]      ; AC25  ; 5        ; 115          ; 4            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[9]      ; AB25  ; 5        ; 115          ; 16           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -1859,14 +1859,23 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node            ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                   ; Library Name ;
 +---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------+--------------+
-; |audi_efx_gen                         ; 197 (0)     ; 110 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 115  ; 0            ; 87 (0)       ; 19 (0)            ; 91 (0)           ; |audi_efx_gen                                                                         ; work         ;
-;    |AUDIO_DAC:adac|                   ; 26 (26)     ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 9 (9)             ; 5 (5)            ; |audi_efx_gen|AUDIO_DAC:adac                                                          ; work         ;
-;    |I2C_AV_Config:i2ccontroller|      ; 142 (86)    ; 75 (45)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 67 (40)      ; 8 (0)             ; 67 (45)          ; |audi_efx_gen|I2C_AV_Config:i2ccontroller                                             ; work         ;
-;       |I2C_Controller:u0|             ; 58 (58)     ; 30 (30)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (27)      ; 8 (8)             ; 23 (23)          ; |audi_efx_gen|I2C_AV_Config:i2ccontroller|I2C_Controller:u0                           ; work         ;
-;    |Reset_Delay:r0|                   ; 29 (29)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 2 (2)             ; 19 (19)          ; |audi_efx_gen|Reset_Delay:r0                                                          ; work         ;
+; |audi_efx_gen                         ; 463 (118)   ; 242 (96)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 115  ; 0            ; 221 (22)     ; 99 (61)           ; 143 (30)         ; |audi_efx_gen                                                                         ; work         ;
+;    |HexDriver:h0|                     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |audi_efx_gen|HexDriver:h0                                                            ; work         ;
+;    |HexDriver:h1|                     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; |audi_efx_gen|HexDriver:h1                                                            ; work         ;
+;    |HexDriver:h2|                     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |audi_efx_gen|HexDriver:h2                                                            ; work         ;
+;    |HexDriver:h3|                     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |audi_efx_gen|HexDriver:h3                                                            ; work         ;
+;    |HexDriver:h4|                     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |audi_efx_gen|HexDriver:h4                                                            ; work         ;
+;    |HexDriver:h5|                     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 1 (1)            ; |audi_efx_gen|HexDriver:h5                                                            ; work         ;
+;    |HexDriver:h6|                     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |audi_efx_gen|HexDriver:h6                                                            ; work         ;
+;    |HexDriver:h7|                     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |audi_efx_gen|HexDriver:h7                                                            ; work         ;
+;    |I2C_AV_Config:i2ccontroller|      ; 141 (86)    ; 75 (45)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 66 (41)      ; 7 (1)             ; 68 (44)          ; |audi_efx_gen|I2C_AV_Config:i2ccontroller                                             ; work         ;
+;       |I2C_Controller:u0|             ; 55 (55)     ; 30 (30)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 6 (6)             ; 24 (24)          ; |audi_efx_gen|I2C_AV_Config:i2ccontroller|I2C_Controller:u0                           ; work         ;
+;    |Reset_Delay:r0|                   ; 27 (27)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 21 (21)          ; |audi_efx_gen|Reset_Delay:r0                                                          ; work         ;
 ;    |VGA_Audio_PLL:vgapll|             ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |audi_efx_gen|VGA_Audio_PLL:vgapll                                                    ; work         ;
 ;       |altpll:altpll_component|       ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |audi_efx_gen|VGA_Audio_PLL:vgapll|altpll:altpll_component                            ; work         ;
 ;          |altpll_k3n2:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |audi_efx_gen|VGA_Audio_PLL:vgapll|altpll:altpll_component|altpll_k3n2:auto_generated ; work         ;
+;    |audio_clock:aclock|               ; 17 (17)     ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 14 (14)          ; |audi_efx_gen|audio_clock:aclock                                                      ; work         ;
+;    |audio_converter:aconvert|         ; 109 (109)   ; 36 (36)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 73 (73)      ; 31 (31)           ; 5 (5)            ; |audi_efx_gen|audio_converter:aconvert                                                ; work         ;
 +---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1879,6 +1888,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; KEY[1]      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; KEY[2]      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; KEY[3]      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[0]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[1]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[2]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[3]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[4]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[5]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[6]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[7]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[8]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[9]       ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[10]      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[11]      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[12]      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[13]      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[14]      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[15]      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[16]      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[17]      ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; HEX0[0]     ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; HEX0[1]     ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; HEX0[2]     ; Output   ; --            ; --            ; --                    ; --  ; --   ;
@@ -1963,34 +1990,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[16]    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LEDR[17]    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; I2C_SCLK    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; AUD_ADCDAT  ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; AUD_DACDAT  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; AUD_XCK     ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; I2C_SDAT    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; I2C_SDAT    ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; AUD_ADCLRCK ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; AUD_DACLRCK ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; AUD_BCLK    ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; SW[0]       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[1]       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[2]       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[3]       ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[4]       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[5]       ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[6]       ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[7]       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[8]       ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[9]       ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[10]      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[11]      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[12]      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[13]      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[14]      ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[15]      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[16]      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[17]      ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; KEY[0]      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; CLOCK_50    ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; KEY[0]      ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; CLOCK2_50   ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; AUD_ADCDAT  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 +-------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -2002,94 +2011,108 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; KEY[1]                                                             ;                   ;         ;
 ; KEY[2]                                                             ;                   ;         ;
 ; KEY[3]                                                             ;                   ;         ;
-; AUD_ADCDAT                                                         ;                   ;         ;
+; SW[0]                                                              ;                   ;         ;
+; SW[1]                                                              ;                   ;         ;
+; SW[2]                                                              ;                   ;         ;
+; SW[3]                                                              ;                   ;         ;
+; SW[4]                                                              ;                   ;         ;
+; SW[5]                                                              ;                   ;         ;
+; SW[6]                                                              ;                   ;         ;
+; SW[7]                                                              ;                   ;         ;
+; SW[8]                                                              ;                   ;         ;
+; SW[9]                                                              ;                   ;         ;
+; SW[10]                                                             ;                   ;         ;
+; SW[11]                                                             ;                   ;         ;
+; SW[12]                                                             ;                   ;         ;
+; SW[13]                                                             ;                   ;         ;
+; SW[14]                                                             ;                   ;         ;
+; SW[15]                                                             ;                   ;         ;
+; SW[16]                                                             ;                   ;         ;
+; SW[17]                                                             ;                   ;         ;
 ; I2C_SDAT                                                           ;                   ;         ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|Selector4~0   ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|ACK2~2        ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|ACK3~2        ; 0                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|Selector4~0   ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|ACK2~2        ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|ACK3~2        ; 1                 ; 6       ;
 ; AUD_ADCLRCK                                                        ;                   ;         ;
 ; AUD_DACLRCK                                                        ;                   ;         ;
 ; AUD_BCLK                                                           ;                   ;         ;
-; SW[0]                                                              ;                   ;         ;
-;      - LEDR[0]~output                                              ; 0                 ; 6       ;
-; SW[1]                                                              ;                   ;         ;
-;      - LEDR[1]~output                                              ; 0                 ; 6       ;
-; SW[2]                                                              ;                   ;         ;
-;      - LEDR[2]~output                                              ; 0                 ; 6       ;
-; SW[3]                                                              ;                   ;         ;
-;      - LEDR[3]~output                                              ; 1                 ; 6       ;
-; SW[4]                                                              ;                   ;         ;
-;      - LEDR[4]~output                                              ; 0                 ; 6       ;
-; SW[5]                                                              ;                   ;         ;
-;      - LEDR[5]~output                                              ; 1                 ; 6       ;
-; SW[6]                                                              ;                   ;         ;
-;      - LEDR[6]~output                                              ; 1                 ; 6       ;
-; SW[7]                                                              ;                   ;         ;
-;      - LEDR[7]~output                                              ; 0                 ; 6       ;
-; SW[8]                                                              ;                   ;         ;
-;      - LEDR[8]~output                                              ; 0                 ; 6       ;
-; SW[9]                                                              ;                   ;         ;
-;      - LEDR[9]~output                                              ; 1                 ; 6       ;
-; SW[10]                                                             ;                   ;         ;
-;      - LEDR[10]~output                                             ; 0                 ; 6       ;
-; SW[11]                                                             ;                   ;         ;
-;      - LEDR[11]~output                                             ; 0                 ; 6       ;
-; SW[12]                                                             ;                   ;         ;
-;      - LEDR[12]~output                                             ; 0                 ; 6       ;
-; SW[13]                                                             ;                   ;         ;
-;      - LEDR[13]~output                                             ; 0                 ; 6       ;
-; SW[14]                                                             ;                   ;         ;
-;      - LEDR[14]~output                                             ; 1                 ; 6       ;
-; SW[15]                                                             ;                   ;         ;
-;      - LEDR[15]~output                                             ; 0                 ; 6       ;
-; SW[16]                                                             ;                   ;         ;
-;      - LEDR[16]~output                                             ; 0                 ; 6       ;
-; SW[17]                                                             ;                   ;         ;
-;      - LEDR[17]~output                                             ; 1                 ; 6       ;
-; KEY[0]                                                             ;                   ;         ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK                   ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD_COUNTER[2] ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD_COUNTER[3] ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD_COUNTER[0] ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD_COUNTER[1] ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD_COUNTER[4] ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD_COUNTER[5] ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[2]                 ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[3]                 ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[4]                 ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[5]                 ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[6]                 ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[7]                 ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[8]                 ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[9]                 ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[10]                ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[11]                ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[12]                ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[13]                ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[14]                ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[15]                ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[1]                 ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|LUT_INDEX[1]                    ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|LUT_INDEX[2]                    ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|LUT_INDEX[3]                    ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|LUT_INDEX[4]                    ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|LUT_INDEX[5]                    ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[0]                 ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SCLK          ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_GO                         ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|END           ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mSetup_ST.0010                  ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mSetup_ST.0001                  ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|LUT_INDEX[0]                    ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SDO           ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|ACK1          ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|ACK2          ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|ACK3          ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mSetup_ST.0000                  ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[22]~1      ; 0                 ; 6       ;
-;      - I2C_AV_Config:i2ccontroller|mI2C_DATA[22]~0                 ; 0                 ; 6       ;
 ; CLOCK_50                                                           ;                   ;         ;
+; KEY[0]                                                             ;                   ;         ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK                   ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD_COUNTER[2] ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD_COUNTER[3] ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD_COUNTER[0] ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD_COUNTER[1] ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD_COUNTER[4] ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD_COUNTER[5] ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[2]                 ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[3]                 ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[4]                 ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[5]                 ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[6]                 ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[7]                 ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[8]                 ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[9]                 ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[10]                ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[11]                ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[12]                ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[13]                ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[14]                ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[15]                ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[1]                 ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|LUT_INDEX[1]                    ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|LUT_INDEX[2]                    ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|LUT_INDEX[3]                    ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|LUT_INDEX[4]                    ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|LUT_INDEX[5]                    ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[0]                 ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SCLK          ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_GO                         ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|END           ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mSetup_ST.0010                  ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mSetup_ST.0001                  ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|LUT_INDEX[0]                    ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SDO           ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|ACK1          ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|ACK2          ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|ACK3          ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mSetup_ST.0000                  ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[22]~1      ; 1                 ; 6       ;
+;      - I2C_AV_Config:i2ccontroller|mI2C_DATA[22]~0                 ; 1                 ; 6       ;
 ; CLOCK2_50                                                          ;                   ;         ;
+; AUD_ADCDAT                                                         ;                   ;         ;
+;      - audio_converter:aconvert|AUD_inL[5]~1                       ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[6]~2                       ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[7]~3                       ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[4]~4                       ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[10]~5                      ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[9]~6                       ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[11]~8                      ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[8]~9                       ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[14]~10                     ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[13]~11                     ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[15]~12                     ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[12]~14                     ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[1]~15                      ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[2]~16                      ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[3]~17                      ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inL[0]~18                      ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[9]~1                       ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[5]~2                       ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[13]~3                      ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[1]~4                       ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[6]~5                       ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[10]~6                      ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[14]~7                      ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[2]~8                       ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[7]~9                       ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[11]~10                     ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[15]~11                     ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[3]~12                      ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[8]~14                      ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[4]~15                      ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[12]~16                     ; 1                 ; 6       ;
+;      - audio_converter:aconvert|AUD_inR[0]~17                      ; 1                 ; 6       ;
 +--------------------------------------------------------------------+-------------------+---------+
 
 
@@ -2098,34 +2121,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                           ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; AUDIO_DAC:adac|LessThan1~2                                                     ; LCCOMB_X7_Y61_N22  ; 9       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 ; CLOCK2_50                                                                      ; PIN_AG14           ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; CLOCK_50                                                                       ; PIN_Y2             ; 38      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[22]~1                         ; LCCOMB_X91_Y38_N10 ; 18      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD_COUNTER[5]~9                  ; LCCOMB_X89_Y38_N4  ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; I2C_AV_Config:i2ccontroller|LUT_INDEX[5]                                       ; FF_X83_Y38_N31     ; 22      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; I2C_AV_Config:i2ccontroller|LUT_INDEX[5]~8                                     ; LCCOMB_X83_Y38_N12 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; I2C_AV_Config:i2ccontroller|LessThan0~4                                        ; LCCOMB_X91_Y38_N6  ; 17      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; I2C_AV_Config:i2ccontroller|LessThan1~4                                        ; LCCOMB_X84_Y38_N30 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK                                      ; FF_X91_Y38_N23     ; 58      ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; I2C_AV_Config:i2ccontroller|mI2C_DATA[22]~0                                    ; LCCOMB_X84_Y38_N6  ; 18      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; I2C_AV_Config:i2ccontroller|mI2C_GO                                            ; FF_X84_Y38_N21     ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; CLOCK_50                                                                       ; PIN_Y2             ; 102     ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; Equal0~10                                                                      ; LCCOMB_X98_Y7_N4   ; 41      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[22]~1                         ; LCCOMB_X91_Y47_N14 ; 18      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD_COUNTER[0]~9                  ; LCCOMB_X91_Y47_N2  ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_AV_Config:i2ccontroller|LUT_INDEX[5]                                       ; FF_X89_Y48_N27     ; 22      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; I2C_AV_Config:i2ccontroller|LUT_INDEX[5]~8                                     ; LCCOMB_X89_Y48_N14 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_AV_Config:i2ccontroller|LessThan0~4                                        ; LCCOMB_X90_Y47_N30 ; 17      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; I2C_AV_Config:i2ccontroller|LessThan1~4                                        ; LCCOMB_X90_Y47_N8  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK                                      ; FF_X92_Y47_N7      ; 58      ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; I2C_AV_Config:i2ccontroller|mI2C_DATA[22]~0                                    ; LCCOMB_X89_Y48_N0  ; 18      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; I2C_AV_Config:i2ccontroller|mI2C_GO                                            ; FF_X90_Y47_N25     ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
 ; KEY[0]                                                                         ; PIN_M23            ; 41      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; Reset_Delay:r0|Equal0~6                                                        ; LCCOMB_X8_Y60_N26  ; 21      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Reset_Delay:r0|oRESET                                                          ; FF_X7_Y61_N3       ; 15      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; Reset_Delay:r0|Equal0~6                                                        ; LCCOMB_X102_Y7_N6  ; 21      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Reset_Delay:r0|oRESET                                                          ; FF_X102_Y7_N7      ; 24      ; Async. clear ; no     ; --                   ; --               ; --                        ;
 ; VGA_Audio_PLL:vgapll|altpll:altpll_component|altpll_k3n2:auto_generated|clk[1] ; PLL_4              ; 15      ; Clock        ; yes    ; Global Clock         ; GCLK18           ; --                        ;
+; audio_clock:aclock|LRCK_1X                                                     ; FF_X103_Y7_N1      ; 32      ; Clock        ; yes    ; Global Clock         ; GCLK9            ; --                        ;
+; audio_clock:aclock|LessThan1~2                                                 ; LCCOMB_X103_Y6_N0  ; 9       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; audio_clock:aclock|oAUD_BCK                                                    ; FF_X103_Y7_N9      ; 36      ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
 +--------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                                                                            ;
-+--------------------------------------------------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                                                                           ; Location       ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------------------------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; CLOCK_50                                                                       ; PIN_Y2         ; 38      ; 1                                    ; Global Clock         ; GCLK4            ; --                        ;
-; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK                                      ; FF_X91_Y38_N23 ; 58      ; 13                                   ; Global Clock         ; GCLK7            ; --                        ;
-; VGA_Audio_PLL:vgapll|altpll:altpll_component|altpll_k3n2:auto_generated|clk[1] ; PLL_4          ; 15      ; 14                                   ; Global Clock         ; GCLK18           ; --                        ;
-+--------------------------------------------------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                                                                           ;
++--------------------------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                                                                           ; Location      ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; CLOCK_50                                                                       ; PIN_Y2        ; 102     ; 41                                   ; Global Clock         ; GCLK4            ; --                        ;
+; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK                                      ; FF_X92_Y47_N7 ; 58      ; 4                                    ; Global Clock         ; GCLK7            ; --                        ;
+; VGA_Audio_PLL:vgapll|altpll:altpll_component|altpll_k3n2:auto_generated|clk[1] ; PLL_4         ; 15      ; 9                                    ; Global Clock         ; GCLK18           ; --                        ;
+; audio_clock:aclock|LRCK_1X                                                     ; FF_X103_Y7_N1 ; 32      ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
+; audio_clock:aclock|oAUD_BCK                                                    ; FF_X103_Y7_N9 ; 36      ; 0                                    ; Global Clock         ; GCLK5            ; --                        ;
++--------------------------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------+
@@ -2133,91 +2161,92 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 194 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 81 / 10,120 ( < 1 % )   ;
-; C4 interconnects      ; 38 / 209,544 ( < 1 % )  ;
-; Direct links          ; 60 / 342,891 ( < 1 % )  ;
-; Global clocks         ; 3 / 20 ( 15 % )         ;
-; Local interconnects   ; 131 / 119,088 ( < 1 % ) ;
-; R24 interconnects     ; 58 / 9,963 ( < 1 % )    ;
-; R4 interconnects      ; 93 / 289,782 ( < 1 % )  ;
+; Block interconnects   ; 478 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 65 / 10,120 ( < 1 % )   ;
+; C4 interconnects      ; 231 / 209,544 ( < 1 % ) ;
+; Direct links          ; 164 / 342,891 ( < 1 % ) ;
+; Global clocks         ; 5 / 20 ( 25 % )         ;
+; Local interconnects   ; 291 / 119,088 ( < 1 % ) ;
+; R24 interconnects     ; 80 / 9,963 ( < 1 % )    ;
+; R4 interconnects      ; 320 / 289,782 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 14.07) ; Number of LABs  (Total = 14) ;
+; Number of Logic Elements  (Average = 13.62) ; Number of LABs  (Total = 34) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 0                            ;
-; 2                                           ; 0                            ;
+; 1                                           ; 1                            ;
+; 2                                           ; 1                            ;
 ; 3                                           ; 0                            ;
-; 4                                           ; 0                            ;
+; 4                                           ; 1                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 1                            ;
+; 7                                           ; 0                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 0                            ;
-; 12                                          ; 1                            ;
+; 9                                           ; 2                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 2                            ;
 ; 13                                          ; 2                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 8                            ;
+; 14                                          ; 2                            ;
+; 15                                          ; 3                            ;
+; 16                                          ; 19                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 2.14) ; Number of LABs  (Total = 14) ;
+; LAB-wide Signals  (Average = 1.82) ; Number of LABs  (Total = 34) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 6                            ;
-; 1 Clock                            ; 11                           ;
-; 1 Clock enable                     ; 7                            ;
+; 1 Async. clear                     ; 8                            ;
+; 1 Clock                            ; 18                           ;
+; 1 Clock enable                     ; 15                           ;
 ; 1 Sync. clear                      ; 3                            ;
 ; 1 Sync. load                       ; 1                            ;
-; 2 Clocks                           ; 2                            ;
+; 2 Clock enables                    ; 2                            ;
+; 2 Clocks                           ; 15                           ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 21.29) ; Number of LABs  (Total = 14) ;
+; Number of Signals Sourced  (Average = 20.74) ; Number of LABs  (Total = 34) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
+; 1                                            ; 1                            ;
 ; 2                                            ; 0                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
+; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
+; 6                                            ; 1                            ;
 ; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
+; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 0                            ;
+; 13                                           ; 2                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 1                            ;
 ; 16                                           ; 0                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 3                            ;
-; 20                                           ; 0                            ;
-; 21                                           ; 1                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 0                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 7                            ;
 ; 22                                           ; 2                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 1                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 1                            ;
-; 28                                           ; 0                            ;
+; 23                                           ; 6                            ;
+; 24                                           ; 3                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 2                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 1                            ;
 ; 29                                           ; 1                            ;
-; 30                                           ; 0                            ;
+; 30                                           ; 1                            ;
 ; 31                                           ; 0                            ;
 ; 32                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
@@ -2226,56 +2255,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.00) ; Number of LABs  (Total = 14) ;
+; Number of Signals Sourced Out  (Average = 7.76) ; Number of LABs  (Total = 34) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 0                            ;
+; 1                                               ; 1                            ;
 ; 2                                               ; 2                            ;
-; 3                                               ; 0                            ;
+; 3                                               ; 1                            ;
 ; 4                                               ; 2                            ;
-; 5                                               ; 2                            ;
-; 6                                               ; 1                            ;
-; 7                                               ; 2                            ;
-; 8                                               ; 1                            ;
-; 9                                               ; 0                            ;
-; 10                                              ; 1                            ;
-; 11                                              ; 0                            ;
+; 5                                               ; 4                            ;
+; 6                                               ; 5                            ;
+; 7                                               ; 3                            ;
+; 8                                               ; 5                            ;
+; 9                                               ; 1                            ;
+; 10                                              ; 2                            ;
+; 11                                              ; 2                            ;
 ; 12                                              ; 2                            ;
 ; 13                                              ; 0                            ;
 ; 14                                              ; 1                            ;
+; 15                                              ; 0                            ;
+; 16                                              ; 3                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 10.71) ; Number of LABs  (Total = 14) ;
+; Number of Distinct Inputs  (Average = 10.41) ; Number of LABs  (Total = 34) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
-; 3                                            ; 1                            ;
-; 4                                            ; 0                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 2                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 3                            ;
+; 3                                            ; 3                            ;
+; 4                                            ; 3                            ;
+; 5                                            ; 3                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 3                            ;
+; 8                                            ; 1                            ;
 ; 9                                            ; 2                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 0                            ;
+; 10                                           ; 4                            ;
+; 11                                           ; 4                            ;
 ; 12                                           ; 0                            ;
-; 13                                           ; 2                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 0                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 1                            ;
 ; 16                                           ; 1                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 1                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 0                            ;
 ; 21                                           ; 0                            ;
 ; 22                                           ; 0                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 1                            ;
+; 23                                           ; 1                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2343,6 +2378,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; KEY[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[2]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[1]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[2]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[3]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[4]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[5]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[6]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[7]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[8]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[9]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[10]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[11]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[12]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[13]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[14]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[15]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[16]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[17]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; HEX0[0]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; HEX0[1]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; HEX0[2]            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2427,34 +2480,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[16]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; LEDR[17]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; I2C_SCLK           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; AUD_ADCDAT         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; AUD_DACDAT         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; AUD_XCK            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; I2C_SDAT           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; AUD_ADCLRCK        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; AUD_DACLRCK        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; AUD_BCLK           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[0]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[1]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[2]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[3]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[4]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[5]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[6]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[7]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[8]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[9]              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[10]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[11]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[12]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[13]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[14]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[15]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[16]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[17]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; KEY[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; CLOCK_50           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; KEY[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; CLOCK2_50          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; AUD_ADCDAT         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -2494,13 +2529,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary              ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-; CLOCK_50        ; CLOCK_50             ; 3.2               ;
-+-----------------+----------------------+-------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                                                                                                 ;
++---------------------------------------------------------------------------------------------+-----------------------------+-------------------+
+; Source Clock(s)                                                                             ; Destination Clock(s)        ; Delay Added in ns ;
++---------------------------------------------------------------------------------------------+-----------------------------+-------------------+
+; vgapll|altpll_component|auto_generated|pll1|clk[1]                                          ; audio_clock:aclock|oAUD_BCK ; 13.2              ;
+; CLOCK_50,vgapll|altpll_component|auto_generated|pll1|clk[1]                                 ; audio_clock:aclock|oAUD_BCK ; 11.1              ;
+; I/O,audio_clock:aclock|oAUD_BCK,vgapll|altpll_component|auto_generated|pll1|clk[1],CLOCK_50 ; audio_clock:aclock|oAUD_BCK ; 5.0               ;
+; I/O,audio_clock:aclock|oAUD_BCK,CLOCK_50,vgapll|altpll_component|auto_generated|pll1|clk[1] ; audio_clock:aclock|oAUD_BCK ; 3.6               ;
+; CLOCK_50                                                                                    ; CLOCK_50                    ; 3.3               ;
+; I/O,vgapll|altpll_component|auto_generated|pll1|clk[1],audio_clock:aclock|oAUD_BCK          ; audio_clock:aclock|oAUD_BCK ; 1.2               ;
++---------------------------------------------------------------------------------------------+-----------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
@@ -2510,23 +2550,62 @@ This will disable optimization of problematic paths and expose them for further 
 +----------------------------------------------+-------------------------------------------+-------------------+
 ; Source Register                              ; Destination Register                      ; Delay Added in ns ;
 +----------------------------------------------+-------------------------------------------+-------------------+
-; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK    ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 3.181             ;
-; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[14] ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 0.893             ;
-; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[13] ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 0.893             ;
-; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[12] ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 0.893             ;
-; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[15] ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 0.893             ;
-; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[10] ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 0.893             ;
-; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[9]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 0.893             ;
-; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[8]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 0.893             ;
-; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[7]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 0.893             ;
-; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[6]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 0.893             ;
-; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[5]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 0.893             ;
-; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[4]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 0.893             ;
-; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[3]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 0.893             ;
-; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[2]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 0.893             ;
-; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[11] ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 0.893             ;
+; audio_clock:aclock|LRCK_1X                   ; audio_converter:aconvert|AUD_inR[3]       ; 3.809             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK    ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 3.350             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[14] ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 1.284             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[13] ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 1.284             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[12] ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 1.284             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[15] ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 1.284             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[10] ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 1.284             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[9]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 1.284             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[8]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 1.284             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[7]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 1.284             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[6]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 1.284             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[5]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 1.284             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[4]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 1.284             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[3]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 1.284             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[2]  ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 1.284             ;
+; I2C_AV_Config:i2ccontroller|mI2C_CLK_DIV[11] ; I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK ; 1.284             ;
+; Reset_Delay:r0|oRESET                        ; audio_converter:aconvert|AUD_inR[15]      ; 1.084             ;
+; audio_converter:aconvert|AUD_inL[9]          ; audio_converter:aconvert|AUD_inL[9]       ; 1.051             ;
+; AUD_ADCDAT                                   ; audio_converter:aconvert|AUD_inL[9]       ; 1.051             ;
+; audio_converter:aconvert|AUD_inL[15]         ; audio_converter:aconvert|AUD_inL[15]      ; 1.050             ;
+; audio_converter:aconvert|AUD_inR[3]          ; audio_converter:aconvert|AUD_inR[3]       ; 0.588             ;
+; audio_converter:aconvert|SEL_Cont[1]         ; audio_converter:aconvert|AUD_inR[3]       ; 0.588             ;
+; audio_converter:aconvert|SEL_Cont[0]         ; audio_converter:aconvert|AUD_inR[3]       ; 0.588             ;
+; audio_converter:aconvert|SEL_Cont[2]         ; audio_converter:aconvert|AUD_inR[3]       ; 0.588             ;
+; audio_converter:aconvert|SEL_Cont[3]         ; audio_converter:aconvert|AUD_inR[3]       ; 0.588             ;
+; audio_converter:aconvert|AUD_inR[15]         ; audio_converter:aconvert|AUD_inR[15]      ; 0.472             ;
+; audio_converter:aconvert|AUD_inL[4]          ; audio_converter:aconvert|AUD_inL[4]       ; 0.444             ;
+; audio_converter:aconvert|AUD_inL[3]          ; audio_converter:aconvert|AUD_inL[3]       ; 0.442             ;
+; audio_converter:aconvert|AUD_inR[4]          ; audio_converter:aconvert|AUD_inR[4]       ; 0.422             ;
+; audio_converter:aconvert|AUD_inR[8]          ; audio_converter:aconvert|AUD_inR[8]       ; 0.419             ;
+; audio_converter:aconvert|AUD_inR[10]         ; audio_converter:aconvert|AUD_inR[10]      ; 0.329             ;
+; audio_converter:aconvert|AUD_inR[2]          ; audio_converter:aconvert|AUD_inR[2]       ; 0.303             ;
+; audio_converter:aconvert|AUD_inR[6]          ; audio_converter:aconvert|AUD_inR[6]       ; 0.302             ;
+; audio_converter:aconvert|AUD_inR[7]          ; audio_converter:aconvert|AUD_inR[7]       ; 0.301             ;
+; audio_converter:aconvert|AUD_inR[5]          ; audio_converter:aconvert|AUD_inR[5]       ; 0.300             ;
+; audio_converter:aconvert|AUD_inR[11]         ; audio_converter:aconvert|AUD_inR[11]      ; 0.287             ;
+; audio_converter:aconvert|AUD_inR[12]         ; audio_converter:aconvert|AUD_inR[12]      ; 0.284             ;
+; audio_converter:aconvert|AUD_inR[14]         ; audio_converter:aconvert|AUD_inR[14]      ; 0.283             ;
+; audio_converter:aconvert|AUD_inR[13]         ; audio_converter:aconvert|AUD_inR[13]      ; 0.283             ;
+; audio_converter:aconvert|AUD_inR[9]          ; audio_converter:aconvert|AUD_inR[9]       ; 0.282             ;
+; audio_converter:aconvert|AUD_inL[10]         ; audio_converter:aconvert|AUD_inL[10]      ; 0.262             ;
+; audio_converter:aconvert|AUD_inL[8]          ; audio_converter:aconvert|AUD_inL[8]       ; 0.262             ;
+; audio_converter:aconvert|AUD_inR[1]          ; audio_converter:aconvert|AUD_inR[1]       ; 0.261             ;
+; audio_converter:aconvert|AUD_inR[0]          ; audio_converter:aconvert|AUD_inR[0]       ; 0.261             ;
+; audio_converter:aconvert|AUD_inL[14]         ; audio_converter:aconvert|AUD_inL[14]      ; 0.255             ;
+; audio_converter:aconvert|AUD_inL[6]          ; audio_converter:aconvert|AUD_inL[6]       ; 0.254             ;
+; audio_converter:aconvert|AUD_inL[7]          ; audio_converter:aconvert|AUD_inL[7]       ; 0.252             ;
+; audio_converter:aconvert|AUD_inL[12]         ; audio_converter:aconvert|AUD_inL[12]      ; 0.251             ;
+; audio_converter:aconvert|AUD_inL[11]         ; audio_converter:aconvert|AUD_inL[11]      ; 0.251             ;
+; audio_converter:aconvert|AUD_inL[13]         ; audio_converter:aconvert|AUD_inL[13]      ; 0.249             ;
+; audio_converter:aconvert|AUD_inL[5]          ; audio_converter:aconvert|AUD_inL[5]       ; 0.222             ;
+; audio_converter:aconvert|AUD_inL[2]          ; audio_converter:aconvert|AUD_inL[2]       ; 0.210             ;
+; audio_converter:aconvert|AUD_inL[1]          ; audio_converter:aconvert|AUD_inL[1]       ; 0.210             ;
+; audio_converter:aconvert|AUD_inL[0]          ; audio_converter:aconvert|AUD_inL[0]       ; 0.210             ;
 +----------------------------------------------+-------------------------------------------+-------------------+
-Note: This table only shows the top 15 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 54 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2573,6 +2652,23 @@ Info (176353): Automatically promoted node I2C_AV_Config:i2ccontroller|mI2C_CTRL
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node I2C_AV_Config:i2ccontroller|I2C_Controller:u0|I2C_SCLK~2
         Info (176357): Destination node I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK~0
+Info (176353): Automatically promoted node audio_clock:aclock|oAUD_BCK 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node AUD_BCLK~output
+        Info (176357): Destination node audio_clock:aclock|oAUD_BCK~0
+Info (176353): Automatically promoted node audio_clock:aclock|LRCK_1X 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node AUD_DACLRCK~output
+        Info (176357): Destination node AUD_ADCLRCK~output
+        Info (176357): Destination node audio_converter:aconvert|Mux1~20
+        Info (176357): Destination node audio_clock:aclock|LRCK_1X~0
+        Info (176357): Destination node audio_converter:aconvert|AUD_inL[15]~0
+        Info (176357): Destination node audio_converter:aconvert|AUD_inL[9]~6
+        Info (176357): Destination node audio_converter:aconvert|AUD_inL[15]~12
+        Info (176357): Destination node audio_converter:aconvert|AUD_inR[0]~0
+        Info (176357): Destination node audio_converter:aconvert|AUD_inR[3]~13
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -2992,11 +3088,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:05
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X81_Y37 to location X91_Y48
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X92_Y0 to location X103_Y11
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.27 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.50 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -3009,10 +3105,10 @@ Warning (169064): Following 3 pins have no output enable or a GND or VCC output 
     Info (169065): Pin AUD_BCLK has a permanently enabled output enable
 Info (144001): Generated suppressed messages file D:/Users/Dean/Documents/ECE385/audi_efx_gen/output_files/audi_efx_gen.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 414 warnings
-    Info: Peak virtual memory: 1253 megabytes
-    Info: Processing ended: Sun Apr 15 19:05:38 2018
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Peak virtual memory: 1258 megabytes
+    Info: Processing ended: Tue Apr 17 18:05:26 2018
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +----------------------------+

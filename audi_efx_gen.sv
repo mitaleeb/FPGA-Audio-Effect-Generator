@@ -39,7 +39,7 @@ module audi_efx_gen (
 );
 
   // Do some easy connections
-  assign LEDR = SW;
+  //assign LEDR = SW;
   assign LEDG = 8'b0;
   
   // Create some local connections
@@ -77,7 +77,7 @@ module audi_efx_gen (
     .I2C_SCLK(I2C_SCLK),
     .I2C_SDAT(I2C_SDAT));  
 
-  AUDIO_DAC adac (
+  /*AUDIO_DAC adac (
     // Audio Side
     .oAUD_BCK   (AUD_BCLK),
     .oAUD_DATA  (AUD_DACDAT), 
@@ -85,7 +85,7 @@ module audi_efx_gen (
     // Control Signals
     .iSrc_Select(1'b1), 
     .iCLK_18_4  (AUD_CTRL_CLK), 
-    .iRST_N     (DLY_RESET));
+    .iRST_N     (DLY_RESET));*/
 
   // ##### BEGIN OLD PART ######## //
 
@@ -97,7 +97,7 @@ module audi_efx_gen (
     .iCLK(CLOCK_50), .iRST_N(KEY[0]), 
     // I2C side
     .I2C_SCLK(I2C_SCLK),
-    .I2C_SDAT(I2C_SDAT));
+    .I2C_SDAT(I2C_SDAT));*/
 
   audio_clock aclock (
     // Audio Side
@@ -108,25 +108,52 @@ module audi_efx_gen (
   audio_converter aconvert (
     // Audio side
     .AUD_BCK(AUD_BCLK), .AUD_LRCK(AUD_DACLRCK),
-    .AUD_ADCDAT(AUD_ADCDAT), .AUD_DATA(AUD_DATA), 
+    .AUD_ADCDAT(AUD_ADCDAT), .AUD_DATA(AUD_DACDAT), 
     // Controller Side 
     .iRST_N(DLY_RESET), 
     .AUD_outL(audio_outL), 
     .AUD_outR(audio_outR), 
     .AUD_inL(audio_inL), 
-    .AUD_inR(audio_inR));*/
+    .AUD_inR(audio_inR));
 
   // ###### END OLD PART ####### //
 
+  // Always ff block to make things readable
+  int counterxd;
+  //assign LEDR = counterxd[17:0];
+  logic [3:0] hi0, hi1, hi2, hi3, hi4, hi5, hi6, hi7;
+  always_ff @ (posedge CLOCK_50) begin 
+    if (counterxd == 5000000) begin
+      hi0 <= audio_outR[3:0];
+      hi1 <= audio_outR[7:4];
+      hi2 <= audio_outR[11:8];
+      hi3 <= audio_outR[15:12];
+      hi4 <= audio_outL[3:0];
+      hi5 <= audio_outL[7:4];
+      hi6 <= audio_outL[11:8];
+      hi7 <= audio_outL[15:12];
+		counterxd <= 0;
+	end else begin
+		hi0 <= hi0;
+      hi1 <= hi1;
+      hi2 <= hi2;
+      hi3 <= hi3;
+      hi4 <= hi4;
+      hi5 <= hi5;
+      hi6 <= hi6;
+      hi7 <= hi7;
+		counterxd <= counterxd + 1;
+	end
+  end
 
   // Hex Drivers
-  HexDriver h0(.In0(audio_outR[3:0]), .Out0(HEX0));
-  HexDriver h1(.In0(audio_outR[7:4]), .Out0(HEX1));
-  HexDriver h2(.In0(audio_outR[11:8]), .Out0(HEX2));
-  HexDriver h3(.In0(audio_outR[15:12]), .Out0(HEX3));
-  HexDriver h4(.In0(audio_outL[3:0]), .Out0(HEX4));
-  HexDriver h5(.In0(audio_outL[7:4]), .Out0(HEX5));
-  HexDriver h6(.In0(audio_outL[11:8]), .Out0(HEX6));
-  HexDriver h7(.In0(audio_outL[15:12]), .Out0(HEX7));
+  HexDriver h0(.In0(hi0), .Out0(HEX0));
+  HexDriver h1(.In0(hi1), .Out0(HEX1));
+  HexDriver h2(.In0(hi2), .Out0(HEX2));
+  HexDriver h3(.In0(hi3), .Out0(HEX3));
+  HexDriver h4(.In0(hi4), .Out0(HEX4));
+  HexDriver h5(.In0(hi5), .Out0(HEX5));
+  HexDriver h6(.In0(hi6), .Out0(HEX6));
+  HexDriver h7(.In0(hi7), .Out0(HEX7));
 
 endmodule

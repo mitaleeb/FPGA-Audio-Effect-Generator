@@ -3,19 +3,35 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -2.930
-TNS   : -82.375
+Slack : -3.450
+TNS   : -237.341
 
 Type  : Slow 1200mV 85C Model Setup 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
-Slack : -2.485
-TNS   : -106.369
+Slack : -2.529
+TNS   : -102.277
+
+Type  : Slow 1200mV 85C Model Setup 'audio_clock:aclock|oAUD_BCK'
+Slack : -2.034
+TNS   : -58.938
+
+Type  : Slow 1200mV 85C Model Setup 'audio_clock:aclock|LRCK_1X'
+Slack : -1.293
+TNS   : -19.679
 
 Type  : Slow 1200mV 85C Model Setup 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 51.947
+Slack : 1.148
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 0.386
+Slack : -2.032
+TNS   : -4.064
+
+Type  : Slow 1200mV 85C Model Hold 'audio_clock:aclock|oAUD_BCK'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'audio_clock:aclock|LRCK_1X'
+Slack : 0.311
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
@@ -23,47 +39,79 @@ Slack : 0.388
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.409
+Slack : 0.408
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : -2.421
-TNS   : -33.894
+Slack : -3.012
+TNS   : -38.451
+
+Type  : Slow 1200mV 85C Model Recovery 'audio_clock:aclock|oAUD_BCK'
+Slack : -0.163
+TNS   : -0.652
+
+Type  : Slow 1200mV 85C Model Removal 'audio_clock:aclock|oAUD_BCK'
+Slack : 0.498
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 1.332
+Slack : 1.531
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -51.830
+TNS   : -134.070
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
 Slack : -1.285
 TNS   : -74.530
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'audio_clock:aclock|oAUD_BCK'
+Slack : -1.285
+TNS   : -46.260
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'audio_clock:aclock|LRCK_1X'
+Slack : -1.285
+TNS   : -41.120
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK2_50'
 Slack : 9.894
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 27.484
+Slack : 27.480
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -2.625
-TNS   : -71.482
+Slack : -3.122
+TNS   : -207.305
 
 Type  : Slow 1200mV 0C Model Setup 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
-Slack : -2.190
-TNS   : -92.144
+Slack : -2.160
+TNS   : -87.689
+
+Type  : Slow 1200mV 0C Model Setup 'audio_clock:aclock|oAUD_BCK'
+Slack : -1.752
+TNS   : -50.411
+
+Type  : Slow 1200mV 0C Model Setup 'audio_clock:aclock|LRCK_1X'
+Slack : -1.072
+TNS   : -14.536
 
 Type  : Slow 1200mV 0C Model Setup 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 52.236
+Slack : 1.087
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 0.339
+Slack : -1.893
+TNS   : -3.786
+
+Type  : Slow 1200mV 0C Model Hold 'audio_clock:aclock|oAUD_BCK'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'audio_clock:aclock|LRCK_1X'
+Slack : 0.286
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
@@ -75,75 +123,123 @@ Slack : 0.366
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : -2.147
-TNS   : -30.058
+Slack : -2.697
+TNS   : -34.329
+
+Type  : Slow 1200mV 0C Model Recovery 'audio_clock:aclock|oAUD_BCK'
+Slack : -0.195
+TNS   : -0.780
+
+Type  : Slow 1200mV 0C Model Removal 'audio_clock:aclock|oAUD_BCK'
+Slack : 0.565
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 1.175
+Slack : 1.357
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -51.830
+TNS   : -134.070
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
 Slack : -1.285
 TNS   : -74.530
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'audio_clock:aclock|oAUD_BCK'
+Slack : -1.285
+TNS   : -46.260
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'audio_clock:aclock|LRCK_1X'
+Slack : -1.285
+TNS   : -41.120
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK2_50'
 Slack : 9.915
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 27.468
+Slack : 27.471
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -0.893
-TNS   : -20.714
+Slack : -1.189
+TNS   : -63.789
 
 Type  : Fast 1200mV 0C Model Setup 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
-Slack : -0.690
-TNS   : -22.297
+Slack : -0.767
+TNS   : -20.415
+
+Type  : Fast 1200mV 0C Model Setup 'audio_clock:aclock|LRCK_1X'
+Slack : -0.572
+TNS   : -5.556
+
+Type  : Fast 1200mV 0C Model Setup 'audio_clock:aclock|oAUD_BCK'
+Slack : -0.479
+TNS   : -12.250
 
 Type  : Fast 1200mV 0C Model Setup 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 53.830
+Slack : 0.548
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 0.173
+Slack : -1.086
+TNS   : -2.172
+
+Type  : Fast 1200mV 0C Model Hold 'audio_clock:aclock|oAUD_BCK'
+Slack : -0.037
+TNS   : -0.090
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.086
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'audio_clock:aclock|LRCK_1X'
+Slack : 0.110
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
 Slack : 0.175
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.189
+Type  : Fast 1200mV 0C Model Recovery 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -1.645
+TNS   : -21.275
+
+Type  : Fast 1200mV 0C Model Recovery 'audio_clock:aclock|oAUD_BCK'
+Slack : 0.244
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Recovery 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : -1.359
-TNS   : -19.026
+Type  : Fast 1200mV 0C Model Removal 'audio_clock:aclock|oAUD_BCK'
+Slack : 0.318
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 0.682
+Slack : 0.763
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -43.369
+TNS   : -112.327
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'I2C_AV_Config:i2ccontroller|mI2C_CTRL_CLK'
 Slack : -1.000
 TNS   : -58.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'audio_clock:aclock|oAUD_BCK'
+Slack : -1.000
+TNS   : -36.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'audio_clock:aclock|LRCK_1X'
+Slack : -1.000
+TNS   : -32.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK2_50'
 Slack : 9.604
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'vgapll|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 27.573
+Slack : 27.552
 TNS   : 0.000
 
 ------------------------------------------------------------
