@@ -4,3 +4,11 @@ Name mSetup_ST.0000 mSetup_ST.0010 mSetup_ST.0001
 mSetup_ST.0000 0 0 0 
 mSetup_ST.0001 1 0 1 
 mSetup_ST.0010 1 1 0 
+
+State Machine - |audi_efx_gen|audio_modifier:amod|vol_state
+Name vol_state.Decrease vol_state.Decrease_s vol_state.Increase_s vol_state.Increase vol_state.Idle 
+vol_state.Increase 0 0 0 0 0 
+vol_state.Increase_s 0 0 1 1 0 
+vol_state.Decrease_s 0 1 0 1 0 
+vol_state.Decrease 1 0 0 1 0 
+vol_state.Idle 0 0 0 1 1 

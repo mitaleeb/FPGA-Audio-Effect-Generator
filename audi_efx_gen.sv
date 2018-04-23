@@ -38,13 +38,12 @@ module audi_efx_gen (
   output AUD_XCK // Chip Clock
 );
 
-  // Do some easy connections
-  //assign LEDR = SW;
+  // Do some connections for debugging
+  assign LEDR = SW;
   assign LEDG = 8'b0;
   
   // Create some local connections
-  logic reset_h, DLY_RESET;
-  assign reset_h = ~KEY[0];
+  logic DLY_RESET;
 
   logic AUD_CTRL_CLK; // For Audio Controller
 
@@ -54,20 +53,23 @@ module audi_efx_gen (
 
   // Audio signals 
   logic [15:0] audio_inL, audio_inR;
-  logic [15:0] audio_outL, audio_outR;
+  logic [15:0] audio_outL, audio_outR, DSP_outL, DSP_outR;
 
   // Update audio signals
   always_ff @ (negedge AUD_DACLRCK) begin
-    audio_outR <= audio_inR;
+    audio_outR <= DSP_outR;
   end
 
   always_ff @ (posedge AUD_DACLRCK) begin
-    audio_outL <= audio_inL;
+    audio_outL <= DSP_outL;
   end 
   
+  audio_modifier amod(.*, .DSP_enable(SW[0]), .vol_up(~KEY[1]), .vol_down(~KEY[0]));
+
+  ////////// AUDIO IO //////////
+
   // Initialize the VGA_Audio_PLL provided by Altera
   Reset_Delay r0 (.iCLK(CLOCK_50), .oRESET(DLY_RESET));
-
   VGA_Audio_PLL vgapll(.areset(~DLY_RESET), .inclk0(CLOCK2_50), .c1(AUD_CTRL_CLK));
 
   I2C_AV_Config i2ccontroller (
@@ -76,28 +78,6 @@ module audi_efx_gen (
     // I2C side
     .I2C_SCLK(I2C_SCLK),
     .I2C_SDAT(I2C_SDAT));  
-
-  /*AUDIO_DAC adac (
-    // Audio Side
-    .oAUD_BCK   (AUD_BCLK),
-    .oAUD_DATA  (AUD_DACDAT), 
-    .oAUD_LRCK  (AUD_DACLRCK),
-    // Control Signals
-    .iSrc_Select(1'b1), 
-    .iCLK_18_4  (AUD_CTRL_CLK), 
-    .iRST_N     (DLY_RESET));*/
-
-  // ##### BEGIN OLD PART ######## //
-
-  // Initialize the VGA_Audio_PLL provided by John Loomis
-  /*VGA_Audio_PLL vgapll (.areset(reset_h), .inclk0(CLOCK_27), .c1(AUD_CTRL_CLK));
-
-  I2C_AV_Config i2ccontroller (
-    // Host Side
-    .iCLK(CLOCK_50), .iRST_N(KEY[0]), 
-    // I2C side
-    .I2C_SCLK(I2C_SCLK),
-    .I2C_SDAT(I2C_SDAT));*/
 
   audio_clock aclock (
     // Audio Side
@@ -115,8 +95,6 @@ module audi_efx_gen (
     .AUD_outR(audio_outR), 
     .AUD_inL(audio_inL), 
     .AUD_inR(audio_inR));
-
-  // ###### END OLD PART ####### //
 
   // Always ff block to make things readable
   int counterxd;
