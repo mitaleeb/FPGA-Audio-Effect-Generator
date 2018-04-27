@@ -9,13 +9,13 @@ module audio_modifier(
   input AUD_DACLRCK, 
 	input logic [15:0] audio_inR, audio_inL, 
 	output logic [15:0] DSP_outR, DSP_outL, 
-	input logic vol_up, vol_down
+	input logic vol_up, vol_down, 
+  input logic [3:0] filter_select // Selects the filters to be active
 );
 
 int volume_scale;
 logic [15:0] audio_R, audio_L; 
 
-// VOLUME CONTROL
 always_ff @ (posedge AUD_DACLRCK) begin
 
   // Decide what to output based on DSP_enable signal
@@ -23,14 +23,15 @@ always_ff @ (posedge AUD_DACLRCK) begin
     DSP_outR <= audio_R * volume_scale;
     DSP_outL <= audio_L * volume_scale;
 	end else begin 
-    //volume_scale <= 1; // Super ratchet
     DSP_outR <= audio_inR;
     DSP_outL <= audio_inL;
   end
 end
 
+logic [15:0] lpf_outL, lpf_outR;
+lowpassfilter lpf(.*, .lpf_outputR(lpf_outR), .lpf_outputL(lpf_outR));
 
-// Volume FSM
+///////////// Volume Control ////////////
 enum logic [4:0] {Increase, Increase_s, Decrease_s, Decrease, Idle} vol_state, vol_state_next;
 int vol_scale_n;
 always_ff @ (posedge CLOCK_50) begin
@@ -72,6 +73,7 @@ always_comb begin
   end
   endcase
 end
+///////////// End Volume Control //////////
 
 // DEBUG
 assign audio_R = audio_inR;

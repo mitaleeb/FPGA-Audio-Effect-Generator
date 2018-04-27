@@ -12,3 +12,19 @@ vol_state.Increase_s 0 0 1 1 0
 vol_state.Decrease_s 0 1 0 1 0 
 vol_state.Decrease 1 0 0 1 0 
 vol_state.Idle 0 0 0 1 1 
+
+State Machine - |audi_efx_gen|audio_modifier:amod|lowpassfilter:lpf|biquad:right|state
+Name state.NEW_SAMPLE state.LOAD_COEFFICIENTS_DONE state.LOAD_COEFFICIENTS state.RESET state.COMPUTE 
+state.RESET 0 0 0 0 0 
+state.LOAD_COEFFICIENTS 0 0 1 1 0 
+state.LOAD_COEFFICIENTS_DONE 0 1 0 1 0 
+state.NEW_SAMPLE 1 0 0 1 0 
+state.COMPUTE 0 0 0 1 1 
+
+State Machine - |audi_efx_gen|audio_modifier:amod|lowpassfilter:lpf|biquad:left|state
+Name state.NEW_SAMPLE state.LOAD_COEFFICIENTS_DONE state.LOAD_COEFFICIENTS state.RESET state.COMPUTE 
+state.RESET 0 0 0 0 0 
+state.LOAD_COEFFICIENTS 0 0 1 1 0 
+state.LOAD_COEFFICIENTS_DONE 0 1 0 1 0 
+state.NEW_SAMPLE 1 0 0 1 0 
+state.COMPUTE 0 0 0 1 1 

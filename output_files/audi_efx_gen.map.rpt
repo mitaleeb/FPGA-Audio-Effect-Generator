@@ -1,5 +1,5 @@
 Analysis & Synthesis report for audi_efx_gen
-Sun Apr 22 22:13:14 2018
+Fri Apr 27 00:13:17 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -16,24 +16,29 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
   8. Analysis & Synthesis DSP Block Usage Summary
   9. State Machine - |audi_efx_gen|I2C_AV_Config:i2ccontroller|mSetup_ST
  10. State Machine - |audi_efx_gen|audio_modifier:amod|vol_state
- 11. Registers Removed During Synthesis
- 12. Removed Registers Triggering Further Register Optimizations
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Parameter Settings for User Entity Instance: VGA_Audio_PLL:vgapll|altpll:altpll_component
- 17. Parameter Settings for User Entity Instance: I2C_AV_Config:i2ccontroller
- 18. Parameter Settings for User Entity Instance: audio_clock:aclock
- 19. Parameter Settings for Inferred Entity Instance: audio_modifier:amod|lpm_mult:Mult0
- 20. Parameter Settings for Inferred Entity Instance: audio_modifier:amod|lpm_mult:Mult1
- 21. altpll Parameter Settings by Entity Instance
- 22. lpm_mult Parameter Settings by Entity Instance
- 23. Port Connectivity Checks: "I2C_AV_Config:i2ccontroller|I2C_Controller:u0"
- 24. Port Connectivity Checks: "VGA_Audio_PLL:vgapll"
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
- 28. Analysis & Synthesis Suppressed Messages
+ 11. State Machine - |audi_efx_gen|audio_modifier:amod|lowpassfilter:lpf|biquad:right|state
+ 12. State Machine - |audi_efx_gen|audio_modifier:amod|lowpassfilter:lpf|biquad:left|state
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Parameter Settings for User Entity Instance: VGA_Audio_PLL:vgapll|altpll:altpll_component
+ 19. Parameter Settings for User Entity Instance: I2C_AV_Config:i2ccontroller
+ 20. Parameter Settings for User Entity Instance: audio_clock:aclock
+ 21. Parameter Settings for Inferred Entity Instance: audio_modifier:amod|lpm_mult:Mult0
+ 22. Parameter Settings for Inferred Entity Instance: audio_modifier:amod|lpm_mult:Mult1
+ 23. altpll Parameter Settings by Entity Instance
+ 24. lpm_mult Parameter Settings by Entity Instance
+ 25. Port Connectivity Checks: "I2C_AV_Config:i2ccontroller|I2C_Controller:u0"
+ 26. Port Connectivity Checks: "VGA_Audio_PLL:vgapll"
+ 27. Port Connectivity Checks: "audio_modifier:amod|lowpassfilter:lpf|biquad:right"
+ 28. Port Connectivity Checks: "audio_modifier:amod|lowpassfilter:lpf|biquad:left"
+ 29. Port Connectivity Checks: "audio_modifier:amod|lowpassfilter:lpf"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
+ 33. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -60,7 +65,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 22 22:13:14 2018      ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 27 00:13:17 2018      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; audi_efx_gen                               ;
 ; Top-level Entity Name              ; audi_efx_gen                               ;
@@ -180,6 +185,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ; Library ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; lowpassfilter.sv                 ; yes             ; User SystemVerilog HDL File  ; D:/Users/Dean/Documents/ECE385/audi_efx_gen/lowpassfilter.sv                ;         ;
+; fp_multiplier.sv                 ; yes             ; User SystemVerilog HDL File  ; D:/Users/Dean/Documents/ECE385/audi_efx_gen/fp_multiplier.sv                ;         ;
+; biquad.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/Users/Dean/Documents/ECE385/audi_efx_gen/biquad.sv                       ;         ;
 ; v_Audio_Inout/audio_converter.v  ; yes             ; User Verilog HDL File        ; D:/Users/Dean/Documents/ECE385/audi_efx_gen/v_Audio_Inout/audio_converter.v ;         ;
 ; v_Audio_Inout/audio_clock.v      ; yes             ; User Verilog HDL File        ; D:/Users/Dean/Documents/ECE385/audi_efx_gen/v_Audio_Inout/audio_clock.v     ;         ;
 ; Audio Inout/I2C_Controller.v     ; yes             ; User Verilog HDL File        ; D:/Users/Dean/Documents/ECE385/audi_efx_gen/Audio Inout/I2C_Controller.v    ;         ;
@@ -314,41 +322,88 @@ Encoding Type:  One-Hot
 +----------------------+--------------------+----------------------+----------------------+--------------------+----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                               ;
-+---------------------------------------------------------------+------------------------------------------------------------------+
-; Register name                                                 ; Reason for Removal                                               ;
-+---------------------------------------------------------------+------------------------------------------------------------------+
-; I2C_AV_Config:i2ccontroller|mI2C_DATA[16,17,19,23]            ; Stuck at GND due to stuck port data_in                           ;
-; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[16,17,19,23] ; Stuck at GND due to stuck port data_in                           ;
-; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[20,21]       ; Merged with I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[18] ;
-; I2C_AV_Config:i2ccontroller|mI2C_DATA[20,21]                  ; Merged with I2C_AV_Config:i2ccontroller|mI2C_DATA[18]            ;
-; I2C_AV_Config:i2ccontroller|mSetup_ST~9                       ; Lost fanout                                                      ;
-; I2C_AV_Config:i2ccontroller|mSetup_ST~10                      ; Lost fanout                                                      ;
-; audio_modifier:amod|vol_state~2                               ; Lost fanout                                                      ;
-; audio_modifier:amod|vol_state~3                               ; Lost fanout                                                      ;
-; audio_modifier:amod|vol_state~5                               ; Lost fanout                                                      ;
-; audio_modifier:amod|vol_state~6                               ; Lost fanout                                                      ;
-; audio_modifier:amod|vol_state.Increase_s                      ; Lost fanout                                                      ;
-; audio_clock:aclock|BCK_DIV[3]                                 ; Stuck at GND due to stuck port data_in                           ;
-; Total Number of Removed Registers = 20                        ;                                                                  ;
-+---------------------------------------------------------------+------------------------------------------------------------------+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |audi_efx_gen|audio_modifier:amod|lowpassfilter:lpf|biquad:right|state                                                 ;
++------------------------------+------------------+------------------------------+-------------------------+-------------+---------------+
+; Name                         ; state.NEW_SAMPLE ; state.LOAD_COEFFICIENTS_DONE ; state.LOAD_COEFFICIENTS ; state.RESET ; state.COMPUTE ;
++------------------------------+------------------+------------------------------+-------------------------+-------------+---------------+
+; state.RESET                  ; 0                ; 0                            ; 0                       ; 0           ; 0             ;
+; state.LOAD_COEFFICIENTS      ; 0                ; 0                            ; 1                       ; 1           ; 0             ;
+; state.LOAD_COEFFICIENTS_DONE ; 0                ; 1                            ; 0                       ; 1           ; 0             ;
+; state.NEW_SAMPLE             ; 1                ; 0                            ; 0                       ; 1           ; 0             ;
+; state.COMPUTE                ; 0                ; 0                            ; 0                       ; 1           ; 1             ;
++------------------------------+------------------+------------------------------+-------------------------+-------------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                  ;
-+-------------------------------------------+---------------------------+------------------------------------------------------+
-; Register name                             ; Reason for Removal        ; Registers Removed due to This Register               ;
-+-------------------------------------------+---------------------------+------------------------------------------------------+
-; I2C_AV_Config:i2ccontroller|mI2C_DATA[23] ; Stuck at GND              ; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[23] ;
-;                                           ; due to stuck port data_in ;                                                      ;
-; I2C_AV_Config:i2ccontroller|mI2C_DATA[19] ; Stuck at GND              ; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[19] ;
-;                                           ; due to stuck port data_in ;                                                      ;
-; I2C_AV_Config:i2ccontroller|mI2C_DATA[17] ; Stuck at GND              ; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[17] ;
-;                                           ; due to stuck port data_in ;                                                      ;
-; I2C_AV_Config:i2ccontroller|mI2C_DATA[16] ; Stuck at GND              ; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[16] ;
-;                                           ; due to stuck port data_in ;                                                      ;
-+-------------------------------------------+---------------------------+------------------------------------------------------+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |audi_efx_gen|audio_modifier:amod|lowpassfilter:lpf|biquad:left|state                                                  ;
++------------------------------+------------------+------------------------------+-------------------------+-------------+---------------+
+; Name                         ; state.NEW_SAMPLE ; state.LOAD_COEFFICIENTS_DONE ; state.LOAD_COEFFICIENTS ; state.RESET ; state.COMPUTE ;
++------------------------------+------------------+------------------------------+-------------------------+-------------+---------------+
+; state.RESET                  ; 0                ; 0                            ; 0                       ; 0           ; 0             ;
+; state.LOAD_COEFFICIENTS      ; 0                ; 0                            ; 1                       ; 1           ; 0             ;
+; state.LOAD_COEFFICIENTS_DONE ; 0                ; 1                            ; 0                       ; 1           ; 0             ;
+; state.NEW_SAMPLE             ; 1                ; 0                            ; 0                       ; 1           ; 0             ;
+; state.COMPUTE                ; 0                ; 0                            ; 0                       ; 1           ; 1             ;
++------------------------------+------------------+------------------------------+-------------------------+-------------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                 ;
++---------------------------------------------------------------------------------+------------------------------------------------------------------+
+; Register name                                                                   ; Reason for Removal                                               ;
++---------------------------------------------------------------------------------+------------------------------------------------------------------+
+; I2C_AV_Config:i2ccontroller|mI2C_DATA[16,17,19,23]                              ; Stuck at GND due to stuck port data_in                           ;
+; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[16,17,19,23]                   ; Stuck at GND due to stuck port data_in                           ;
+; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[20,21]                         ; Merged with I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[18] ;
+; I2C_AV_Config:i2ccontroller|mI2C_DATA[20,21]                                    ; Merged with I2C_AV_Config:i2ccontroller|mI2C_DATA[18]            ;
+; audio_modifier:amod|lowpassfilter:lpf|new_sample                                ; Stuck at GND due to stuck port data_in                           ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:right|state.RESET                  ; Lost fanout                                                      ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:right|state.LOAD_COEFFICIENTS_DONE ; Lost fanout                                                      ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:right|state.COMPUTE                ; Lost fanout                                                      ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:right|state.NEW_SAMPLE             ; Lost fanout                                                      ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:left|state.RESET                   ; Lost fanout                                                      ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:left|state.LOAD_COEFFICIENTS_DONE  ; Lost fanout                                                      ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:left|state.COMPUTE                 ; Lost fanout                                                      ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:left|state.NEW_SAMPLE              ; Lost fanout                                                      ;
+; I2C_AV_Config:i2ccontroller|mSetup_ST~9                                         ; Lost fanout                                                      ;
+; I2C_AV_Config:i2ccontroller|mSetup_ST~10                                        ; Lost fanout                                                      ;
+; audio_modifier:amod|vol_state~2                                                 ; Lost fanout                                                      ;
+; audio_modifier:amod|vol_state~3                                                 ; Lost fanout                                                      ;
+; audio_modifier:amod|vol_state~5                                                 ; Lost fanout                                                      ;
+; audio_modifier:amod|vol_state~6                                                 ; Lost fanout                                                      ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:right|state~2                      ; Lost fanout                                                      ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:right|state~3                      ; Lost fanout                                                      ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:right|state.LOAD_COEFFICIENTS      ; Lost fanout                                                      ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:left|state~2                       ; Lost fanout                                                      ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:left|state~3                       ; Lost fanout                                                      ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:left|state.LOAD_COEFFICIENTS       ; Lost fanout                                                      ;
+; audio_modifier:amod|vol_state.Increase_s                                        ; Lost fanout                                                      ;
+; audio_clock:aclock|BCK_DIV[3]                                                   ; Stuck at GND due to stuck port data_in                           ;
+; Total Number of Removed Registers = 35                                          ;                                                                  ;
++---------------------------------------------------------------------------------+------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                             ;
++----------------------------------------------------------------+---------------------------+----------------------------------------------------------------------------+
+; Register name                                                  ; Reason for Removal        ; Registers Removed due to This Register                                     ;
++----------------------------------------------------------------+---------------------------+----------------------------------------------------------------------------+
+; audio_modifier:amod|lowpassfilter:lpf|biquad:right|state.RESET ; Lost Fanouts              ; audio_modifier:amod|lowpassfilter:lpf|biquad:right|state.NEW_SAMPLE,       ;
+;                                                                ;                           ; audio_modifier:amod|lowpassfilter:lpf|biquad:right|state.LOAD_COEFFICIENTS ;
+; audio_modifier:amod|lowpassfilter:lpf|biquad:left|state.RESET  ; Lost Fanouts              ; audio_modifier:amod|lowpassfilter:lpf|biquad:left|state.NEW_SAMPLE,        ;
+;                                                                ;                           ; audio_modifier:amod|lowpassfilter:lpf|biquad:left|state.LOAD_COEFFICIENTS  ;
+; I2C_AV_Config:i2ccontroller|mI2C_DATA[23]                      ; Stuck at GND              ; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[23]                       ;
+;                                                                ; due to stuck port data_in ;                                                                            ;
+; I2C_AV_Config:i2ccontroller|mI2C_DATA[19]                      ; Stuck at GND              ; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[19]                       ;
+;                                                                ; due to stuck port data_in ;                                                                            ;
+; I2C_AV_Config:i2ccontroller|mI2C_DATA[17]                      ; Stuck at GND              ; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[17]                       ;
+;                                                                ; due to stuck port data_in ;                                                                            ;
+; I2C_AV_Config:i2ccontroller|mI2C_DATA[16]                      ; Stuck at GND              ; I2C_AV_Config:i2ccontroller|I2C_Controller:u0|SD[16]                       ;
+;                                                                ; due to stuck port data_in ;                                                                            ;
++----------------------------------------------------------------+---------------------------+----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -946,6 +1001,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "audio_modifier:amod|lowpassfilter:lpf|biquad:right"                                                                                                                                                ;
++----------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                 ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Reset                ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Reset[-1]            ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; computation_done     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
+; coefficients_updated ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++----------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "audio_modifier:amod|lowpassfilter:lpf|biquad:left"                                                                                                                                                 ;
++----------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                 ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Reset                ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Reset[-1]            ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; computation_done     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
+; coefficients_updated ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++----------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "audio_modifier:amod|lowpassfilter:lpf"                                                     ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; lpf_outputR ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; lpf_outputL ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -987,7 +1076,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -997,9 +1086,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Sun Apr 22 22:13:03 2018
+    Info: Processing started: Fri Apr 27 00:13:01 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off audi_efx_gen -c audi_efx_gen
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Warning (10229): Verilog HDL Expression warning at SevenSegment.sv(65): truncated literal to match 7 bits
+Info (12021): Found 1 design units, including 1 entities, in source file sevensegment.sv
+    Info (12023): Found entity 1: SevenSegment
+Info (12021): Found 1 design units, including 1 entities, in source file lowpassfilter.sv
+    Info (12023): Found entity 1: lowpassfilter
+Info (12021): Found 1 design units, including 1 entities, in source file fp_multiplier.sv
+    Info (12023): Found entity 1: fp_multiplier
+Info (12021): Found 1 design units, including 1 entities, in source file biquad.sv
+    Info (12023): Found entity 1: biquad
 Info (12021): Found 1 design units, including 1 entities, in source file v_audio_inout/audio_converter.v
     Info (12023): Found entity 1: audio_converter
 Info (12021): Found 1 design units, including 1 entities, in source file v_audio_inout/audio_clock.v
@@ -1023,6 +1121,10 @@ Warning (10665): Bidirectional port "AUD_DACLRCK" at audi_efx_gen.sv(35) has a o
 Info (12128): Elaborating entity "audio_modifier" for hierarchy "audio_modifier:amod"
 Warning (10230): Verilog HDL assignment warning at audio_modifier.sv(23): truncated value with size 32 to match size of target (16)
 Warning (10230): Verilog HDL assignment warning at audio_modifier.sv(24): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "lowpassfilter" for hierarchy "audio_modifier:amod|lowpassfilter:lpf"
+Info (12128): Elaborating entity "biquad" for hierarchy "audio_modifier:amod|lowpassfilter:lpf|biquad:left"
+Info (10264): Verilog HDL Case Statement information at biquad.sv(98): all case item expressions in this case statement are onehot
+Info (12128): Elaborating entity "fp_multiplier" for hierarchy "audio_modifier:amod|lowpassfilter:lpf|biquad:left|fp_multiplier:mx0"
 Info (12128): Elaborating entity "Reset_Delay" for hierarchy "Reset_Delay:r0"
 Warning (10230): Verilog HDL assignment warning at Reset_Delay.v(10): truncated value with size 32 to match size of target (20)
 Info (12128): Elaborating entity "VGA_Audio_PLL" for hierarchy "VGA_Audio_PLL:vgapll"
@@ -1103,6 +1205,98 @@ Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(90): truncat
 Info (12128): Elaborating entity "audio_clock" for hierarchy "audio_clock:aclock"
 Info (12128): Elaborating entity "audio_converter" for hierarchy "audio_converter:aconvert"
 Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:h0"
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|new_coefficients" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[17]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[16]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[15]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[14]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[13]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[12]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[11]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[10]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[9]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[8]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[7]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[6]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[5]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[4]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[3]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[2]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[1]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a0[0]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[17]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[16]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[15]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[14]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[13]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[12]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[11]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[10]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[9]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[8]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[7]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[6]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[5]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[4]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[3]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[2]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[1]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a1[0]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[17]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[16]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[15]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[14]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[13]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[12]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[11]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[10]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[9]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[8]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[7]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[6]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[5]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[4]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[3]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[2]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[1]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|a2[0]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[17]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[16]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[15]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[14]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[13]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[12]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[11]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[10]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[9]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[8]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[7]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[6]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[5]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[4]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[3]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[2]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[1]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b1[0]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[17]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[16]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[15]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[14]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[13]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[12]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[11]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[10]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[9]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[8]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[7]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[6]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[5]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[4]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[3]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[2]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[1]" is missing source, defaulting to GND
+    Warning (12110): Net "audio_modifier:amod|lowpassfilter:lpf|b2[0]" is missing source, defaulting to GND
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "audio_modifier:amod|Mult0"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "audio_modifier:amod|Mult1"
@@ -1119,7 +1313,7 @@ Info (12133): Instantiated megafunction "audio_modifier:amod|lpm_mult:Mult0" wit
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
     Info (12023): Found entity 1: mult_7dt
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "AUD_DACLRCK" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "AUD_BCLK" and its non-tri-state driver.
@@ -1143,7 +1337,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDG[7]" is stuck at GND
     Warning (13410): Pin "LEDG[8]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 7 registers lost all their fanouts during netlist optimizations.
+Info (17049): 21 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored assignments for entity "DE2_115_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity DE2_115_Default -section_id "Root Region" was ignored
     Warning (20014): Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity DE2_115_Default -section_id "Root Region" was ignored
@@ -1212,11 +1406,11 @@ Info (21057): Implemented 708 device resources after synthesis - the final resou
     Info (21061): Implemented 588 logic cells
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 4 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 86 warnings
-    Info: Peak virtual memory: 748 megabytes
-    Info: Processing ended: Sun Apr 22 22:13:14 2018
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 179 warnings
+    Info: Peak virtual memory: 743 megabytes
+    Info: Processing ended: Fri Apr 27 00:13:18 2018
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +------------------------------------------+

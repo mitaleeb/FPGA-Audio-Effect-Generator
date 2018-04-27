@@ -44,6 +44,8 @@ module audi_efx_gen (
   
   // Create some local connections
   logic DLY_RESET;
+  logic [3:0] filter_select;
+  assign filter_select = SW[4:1];
 
   logic AUD_CTRL_CLK; // For Audio Controller
 
