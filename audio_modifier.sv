@@ -29,7 +29,25 @@ always_ff @ (posedge AUD_DACLRCK) begin
 end
 
 logic [15:0] lpf_outL, lpf_outR;
-lowpassfilter lpf(.*, .lpf_outputR(lpf_outR), .lpf_outputL(lpf_outR));
+lowpassfilter lpf(.*, .lpf_outputR(lpf_outR), .lpf_outputL(lpf_outL));
+
+logic [15:0] audio_R_n, audio_L_n;
+always_ff @ (posedge CLOCK_50) begin
+  audio_L <= audio_L_n;
+  audio_R <= audio_R_n;
+end
+
+always_comb begin
+  audio_R_n = audio_inR;
+  audio_L_n = audio_inL;
+
+  // Check the filter selections to decide the next out signal
+  if (filter_select[0]) begin
+    // LPF
+    audio_L_n = lpf_outL;
+    audio_R_n = lpf_outR;
+  end
+end
 
 ///////////// Volume Control ////////////
 enum logic [4:0] {Increase, Increase_s, Decrease_s, Decrease, Idle} vol_state, vol_state_next;
@@ -74,9 +92,5 @@ always_comb begin
   endcase
 end
 ///////////// End Volume Control //////////
-
-// DEBUG
-assign audio_R = audio_inR;
-assign audio_L = audio_inL;
 
 endmodule

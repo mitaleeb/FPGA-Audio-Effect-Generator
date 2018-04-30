@@ -27,7 +27,7 @@ module audi_efx_gen (
 
   // I2C connections
   inout I2C_SDAT, 
-  output I2C_SCLK, 
+  output I2C_SCLK,
 
   // Audio Codec Signals
   inout AUD_ADCLRCK, // ADC LR Clock
@@ -59,11 +59,13 @@ module audi_efx_gen (
 
   // Update audio signals
   always_ff @ (negedge AUD_DACLRCK) begin
-    audio_outR <= DSP_outR;
+    //audio_outR <= DSP_outR;
+	 audio_outR <= 0;
   end
 
   always_ff @ (posedge AUD_DACLRCK) begin
-    audio_outL <= DSP_outL;
+    //audio_outL <= DSP_outL;
+	 audio_outL <= 0;
   end 
   
   audio_modifier amod(.*, .DSP_enable(SW[0]), .vol_up(~KEY[1]), .vol_down(~KEY[0]));
@@ -79,7 +81,7 @@ module audi_efx_gen (
     .iCLK(CLOCK_50), .iRST_N(KEY[0]), 
     // I2C side
     .I2C_SCLK(I2C_SCLK),
-    .I2C_SDAT(I2C_SDAT));  
+    .I2C_SDAT(I2C_SDAT));
 
   audio_clock aclock (
     // Audio Side
