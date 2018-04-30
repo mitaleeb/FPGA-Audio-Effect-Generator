@@ -9,7 +9,7 @@ module lowpassfilter(
   input [15:0] audio_inR,
   input [15:0] audio_inL, // 16-bit audio input
   output [15:0] lpf_outputR, lpf_outputL
-  );
+);
 
   // Control signals for the biquad filters
   logic new_sample, new_coefficients;
@@ -26,9 +26,9 @@ module lowpassfilter(
   // Always block to signal when a new sample needs to happen
   always_ff @ (posedge AUD_DACLRCK) begin
     if (new_sample)
-		new_sample <= 0;
-	 else 
-		new_sample <= 1;
+		  new_sample <= 0;
+	  else 
+		  new_sample <= 1;
   end
 
   enum logic [5:0] {HALT} next_state, state;
